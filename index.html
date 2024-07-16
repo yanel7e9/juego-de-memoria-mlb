@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria – MLB Baseball</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="MLB.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+
+    <div class="main-container">
+        <header>
+            <h1>Juego de Memoria – MLB Baseball</h1>
+            <p id="timer">Tiempo restante: <span id="time">60</span>s</p>
+        </header>
+
+        <div id="gameBoard" class="game-board">
+            <!-- Las cartas del juego se generarán dinámicamente aquí -->
+        </div>
+
+        <div id="gameOverModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Game Over... 🤭</h2>
+                <img src="images/game_over.gif" alt="Game Over GIF">
+                <div class="buttons-container">
+                    <button id="restartGameOverBtn">Reiniciar</button>
+                    <button id="closeGameOverBtn">Cerrar</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="winnerModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>¡Has Ganado! 👍✅</h2>
+                <div class="buttons-container">
+                    <button id="restartWinnerBtn">Reiniciar</button>
+                    <button id="closeWinnerBtn">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
